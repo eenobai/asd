@@ -1,22 +1,17 @@
-<!DOCTYPE HTML>
 <html>
 <head> 
-    <title>Getting Started: Serving Web Content</title> 
+    <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script>
-      function theFunction () {
-         event.preventDefault();
-         // add your ajax call to the controller here e.g
-         $.ajax({
-            url: "localhost:8080/index.html"
-            }).done(function() {
-                // action when the controller call returns
-            });
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript">
+        function initiateFunc() {
+         $.get('localhost:8080/index.jsp');
         }
+        $(initiateFunc);
     </script>
 </head>
 <body>
     <p>Get your greeting <a href="/greeting">here</a></p>
-    <button id = "link1" name="btn" ><a href ="/greeting">asd</a></a></button>
+    <button id = "link1" name="btn" onclick="initiateFunc()"><a>asd</a></a></button>
 </body>
 </html>
